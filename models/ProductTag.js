@@ -19,12 +19,20 @@ ProductTag.init(
       validate: {
         len: [1],
       },
+      references: {
+        model: 'product',
+        key: 'id',
+      },
     },
     tag_id: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
+      },
+      references: {
+        model: 'tag',
+        key: 'id',
       },
     },
   },
